@@ -1,0 +1,95 @@
+:root {
+    --brand: #DC143C; /* Crimson Red */
+    --ink: #ffffff;
+    --bg: transparent; /* Changed from #000000 to transparent */
+    --gunmetal: #202124;
+}
+
+@font-face {
+    font-family: 'SuperClarendon';
+    src: url('/assets/Fonts/SuperClarendon.ttc') format('truetype-collection');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SuperClarendon';
+    src: url('/assets/Fonts/SuperClarendon.ttc') format('truetype-collection');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+/* Base styles */
+* {
+    font-family: 'SuperClarendon', ui-serif, Georgia, serif;
+}
+
+body {
+    background: transparent;
+    color: var(--ink);
+}
+
+/* Changed from var(--bg) to transparent */
+.brand {
+    color: var(--brand);
+}
+
+.brand-bg {
+    background-color: var(--brand);
+}
+
+/* star background overlay */
+.bg-radial-mask {
+    position: relative;
+    isolation: isolate;
+}
+
+/* Comment out or remove the radial gradient background */
+/*
+.bg-radial-mask::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 60% at 50% 50%, rgba(255,255,255,0.10), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+*/
+.bg-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/bg-star.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%; /* Default zoom level */
+    background-color: #333; /* For visibility */
+    z-index: -1;
+}
+
+/* Zoom in more on smaller screens */
+@media (max-width: 768px) {
+    .bg-star {
+        background-size: 120%; /* Zoom in (120% of its natural size) */
+    }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 480px) {
+    .bg-star {
+        background-size: 150%; /* Zoom in further for smaller screens */
+    }
+}
+
+.layer {
+    position: relative;
+    z-index: 1;
+}
+
+p {
+    line-height: 1!important; /* Equivalent to Tailwind's leading-none */
+}
+

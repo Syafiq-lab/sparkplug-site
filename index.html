@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5parkplug — Vitamin Charter Consultancy</title>
+    <!-- Tailwind Play CDN for utilities (optional to replace with full Tailwind later) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#DC143C',
+              gunmetal: '#202124'
+            },
+              fontFamily: {
+                  display: ['SuperClarendon', 'ui-serif','Georgia','serif'],
+                  body: ['SuperClarendon', 'ui-serif','Georgia','serif'],
+                  sans: ['SuperClarendon', 'ui-serif','Georgia','serif'],
+                  serif: ['SuperClarendon', 'ui-serif','Georgia','serif']
+              }
+          }
+        }
+      }
+    </script>
+    <link rel="icon" href="/assets/logo.png" />
+  </head>
+  <body class="bg-black text-white font-serif">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
