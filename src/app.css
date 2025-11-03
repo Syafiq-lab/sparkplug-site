@@ -65,8 +65,8 @@ body {
     background-image: url('/assets/bg-star.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 60%; /* Default zoom level */
-    background-color: #333; /* For visibility */
+    background-size: 70%; /* Default zoom level */
+    background-color: #202124; /* For visibility */
     z-index: -1;
 }
 
